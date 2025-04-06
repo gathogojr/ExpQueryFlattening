@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ExpQueryFlattening.EfCore\Data\QueryAnalyzer.cs" Link="Data\QueryAnalyzer.cs" />
+    <Compile Include="..\ExpQueryFlattening.EfCore\Data\SalesDbContext.cs" Link="Data\SalesDbContext.cs" />
+    <Compile Include="..\ExpQueryFlattening\Models\Category.cs" Link="Models\Category.cs" />
+    <Compile Include="..\ExpQueryFlattening\Models\Customer.cs" Link="Models\Customer.cs" />
+    <Compile Include="..\ExpQueryFlattening\Models\Product.cs" Link="Models\Product.cs" />
+    <Compile Include="..\ExpQueryFlattening\Models\Sale.cs" Link="Models\Sale.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\ExpQueryFlattening.EfCore\appsettings.json" Link="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+</Project>
